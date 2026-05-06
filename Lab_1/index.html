@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar-bg" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom border-secondary">
+                <i class="fas fa-graduation-cap me-2"></i>EduAdmin
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent active">
+                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fas fa-users me-2"></i>Students
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fas fa-chalkboard-teacher me-2"></i>Faculty
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fas fa-book-open me-2"></i>Courses
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fas fa-chart-line me-2"></i>Reports
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fas fa-cog me-2"></i>Settings
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold mt-auto">
+                    <i class="fas fa-power-off me-2"></i>Logout
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 px-4 shadow-sm">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle" title="Toggle Sidebar"></i>
+                    <h2 class="fs-4 m-0 fw-bold text-dark">Dashboard Overview</h2>
+                </div>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item me-3">
+                            <a class="nav-link position-relative" href="#">
+                                <i class="fas fa-bell fs-5"></i>
+                                <span class="position-absolute top-10 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://ui-avatars.com/api/?name=Admin+User&background=4f46e5&color=fff" alt="Admin" class="rounded-circle me-2" width="32">
+                                Admin User
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4 py-4">
+                <!-- Statistics Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stat-card h-100 border-0 shadow-sm border-left-primary">
+                            <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="fs-6 text-muted mb-1 text-uppercase fw-bold">Total Students</p>
+                                    <h3 class="fs-2 fw-bold mb-0 text-dark">5,230</h3>
+                                    <small class="text-success fw-bold"><i class="fas fa-arrow-up me-1"></i>5.2%</small> <small class="text-muted">Since last month</small>
+                                </div>
+                                <div class="icon-shape bg-primary-subtle text-primary rounded-circle p-3 d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-user-graduate fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stat-card h-100 border-0 shadow-sm border-left-success">
+                            <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="fs-6 text-muted mb-1 text-uppercase fw-bold">Total Faculty</p>
+                                    <h3 class="fs-2 fw-bold mb-0 text-dark">245</h3>
+                                    <small class="text-success fw-bold"><i class="fas fa-arrow-up me-1"></i>1.5%</small> <small class="text-muted">Since last month</small>
+                                </div>
+                                <div class="icon-shape bg-success-subtle text-success rounded-circle p-3 d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-chalkboard-teacher fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stat-card h-100 border-0 shadow-sm border-left-warning">
+                            <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="fs-6 text-muted mb-1 text-uppercase fw-bold">Courses</p>
+                                    <h3 class="fs-2 fw-bold mb-0 text-dark">120</h3>
+                                    <small class="text-secondary fw-bold"><i class="fas fa-minus me-1"></i>0%</small> <small class="text-muted">Since last month</small>
+                                </div>
+                                <div class="icon-shape bg-warning-subtle text-warning rounded-circle p-3 d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-book fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stat-card h-100 border-0 shadow-sm border-left-info">
+                            <div class="card-body p-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="fs-6 text-muted mb-1 text-uppercase fw-bold">Revenue</p>
+                                    <h3 class="fs-2 fw-bold mb-0 text-dark">$1.2M</h3>
+                                    <small class="text-success fw-bold"><i class="fas fa-arrow-up me-1"></i>12%</small> <small class="text-muted">Since last month</small>
+                                </div>
+                                <div class="icon-shape bg-info-subtle text-info rounded-circle p-3 d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-dollar-sign fs-3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Table -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0 fw-bold">Recent Enrollments</h5>
+                                <button class="btn btn-sm btn-outline-primary">View All</button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th scope="col" class="ps-4">Student Name</th>
+                                                <th scope="col">ID Number</th>
+                                                <th scope="col">Course</th>
+                                                <th scope="col">Enrollment Date</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col" class="text-end pe-4">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" class="rounded-circle me-3" width="40" alt="Avatar">
+                                                        <div>
+                                                            <div class="fw-bold">John Doe</div>
+                                                            <div class="text-muted small">john.doe@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>STU-2026-001</td>
+                                                <td>Computer Science</td>
+                                                <td>May 1, 2026</td>
+                                                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Active</span></td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=random" class="rounded-circle me-3" width="40" alt="Avatar">
+                                                        <div>
+                                                            <div class="fw-bold">Jane Smith</div>
+                                                            <div class="text-muted small">jane.smith@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>STU-2026-002</td>
+                                                <td>Business Admin</td>
+                                                <td>May 2, 2026</td>
+                                                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Active</span></td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=Michael+Brown&background=random" class="rounded-circle me-3" width="40" alt="Avatar">
+                                                        <div>
+                                                            <div class="fw-bold">Michael Brown</div>
+                                                            <div class="text-muted small">m.brown@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>STU-2026-003</td>
+                                                <td>Mechanical Engineering</td>
+                                                <td>May 3, 2026</td>
+                                                <td><span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill">Pending</span></td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=Emily+Davis&background=random" class="rounded-circle me-3" width="40" alt="Avatar">
+                                                        <div>
+                                                            <div class="fw-bold">Emily Davis</div>
+                                                            <div class="text-muted small">e.davis@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>STU-2026-004</td>
+                                                <td>Psychology</td>
+                                                <td>May 4, 2026</td>
+                                                <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Active</span></td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=Chris+Wilson&background=random" class="rounded-circle me-3" width="40" alt="Avatar">
+                                                        <div>
+                                                            <div class="fw-bold">Chris Wilson</div>
+                                                            <div class="text-muted small">c.wilson@example.com</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>STU-2026-005</td>
+                                                <td>Information Tech</td>
+                                                <td>May 5, 2026</td>
+                                                <td><span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">Dropped</span></td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Toggle Script -->
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script>
+</body>
+</html>
