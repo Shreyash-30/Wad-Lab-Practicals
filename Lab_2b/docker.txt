@@ -1,0 +1,71 @@
+Step 1: Check Docker Installation
+docker --version
+
+👉 Output shows Docker version → means installed correctly
+
+🔹 Step 2: Pull Docker Image
+Example (simple):
+docker pull nginx
+
+👉 This downloads nginx web server image
+
+🔹 Step 3: Run Container
+docker run -d -p 8080:80 nginx
+
+👉 Explanation:
+
+-d → run in background
+-p 8080:80 → map port
+nginx → image name
+🔹 Step 4: Check Running Containers
+docker ps
+
+👉 Shows active containers
+
+🔹 Step 5: Verify Output
+
+Open browser:
+
+http://localhost:8080
+
+👉 You will see nginx welcome page
+
+🔹 Step 6: Stop Container
+docker stop <container_id>
+🔹 Step 7: Remove Container (optional)
+docker rm <container_id>
+🎯 Alternative (Node App – if examiner asks more)
+docker run -d -p 3000:3000 node
+🧠 What to Write in Journal (Theory)
+
+Aim:
+To create and run a Docker container environment.
+
+Steps:
+
+Installed Docker Desktop
+Pulled image using docker pull
+Created container using docker run
+Checked using docker ps
+Accessed application via browser
+💬 Viva Questions (VERY IMPORTANT)
+❓ What is Docker?
+
+👉 Docker is a platform used to develop, ship and run applications in containers.
+
+❓ What is a container?
+
+👉 A container is a lightweight environment that runs an application with all dependencies.
+
+❓ Difference between Image and Container?
+
+👉 Image = blueprint
+👉 Container = running instance
+
+❓ What is docker run?
+
+👉 It creates and starts a container from an image.
+
+❓ What is port mapping?
+
+👉 It connects container port to host port.
